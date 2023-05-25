@@ -1,0 +1,162 @@
+body {
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-textC {
+  text-align: center;
+  font-family: 'Brush Script MT Italic', cursive;
+  font-size: xxx-large;
+}
+
+.left-aligned-list {
+  text-align: center;
+  list-style: none;
+  
+}
+
+
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+
+
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 30%;
+}
+
+/*---------------GALLERY BOX-------------*/
+.galleryback {
+  background-color: rgb(192, 136, 146);
+  width: 95%;
+  height: auto;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.gallerybackmain {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*------------OurServices.js BUTTON CSS---------------  */
+.tabs-containerb {
+  justify-content: space-between;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tabs-containerb > * {
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+/* ----------PINTEREST LAYOUT SETTINGS------------ */
+
+.gallery-masonry {
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+
+.gallery-masonry-column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.gallery-masonry img {
+  display: block;
+  margin-bottom: 15px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/*----------------FOOTER------------------------*/
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/*-----------GOOOGLE MAPS BLOCK--------------------*/
+
+.gmap {
+  display: flex;
+  justify-content: center;
+}
+/*-----------------------------------------------------*/
+.allbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*-----------------------------------------------------*/
+.logo {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+/*-------------TABs-------------------------------------*/
+.react-tabs__tab-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 0.5rem;
+}
+
+.react-tabs__tab {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.react-tabs__tab--selected {
+  background-color: white;
+  color: black;
+}
