@@ -5,17 +5,13 @@ import Footer from './footer';
 import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
 import './index.css';
+import AnimatedPage from './AnimatedPage';
 import Header from './header';
 
 
-const Home = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const handleTabClick = (tabIndex: number) => {
-    setActiveTab(tabIndex);
-  };
-  
+const Home = () => {  
   return (
+    <AnimatedPage>
     <div>
       <div>
           <div>
@@ -32,6 +28,7 @@ const Home = () => {
           </div>
       </div>
     </div>
+    </AnimatedPage>
   );
 };
 export default Home;

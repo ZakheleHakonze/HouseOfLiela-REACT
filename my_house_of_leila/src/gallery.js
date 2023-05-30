@@ -1,7 +1,8 @@
 import React, { useState, useEffect  } from 'react';
 import Masonry from 'react-masonry-css';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Imgplace from './imgplace';
+import AnimatedPage from './AnimatedPage';
 import './styles.css'; // make sure to create this file in your project directory
 
 
@@ -34,13 +35,14 @@ const Gallery = ({ images }) => {
       columnClassName="gallery-masonry-column"
     >
       {images.map((image) => (
-        <img key={image.src} src={image.src} alt={image.alt} />
+        <Imgplace key={image.src} src={image.src} alt={image.alt} />
       ))}
     </Masonry>
   );
 };
 //---------------------------------------------------------------------------  
   return (
+    <AnimatedPage>
     <div className='allbody'>
       <div className="background">
           <div className="app-container">
@@ -57,6 +59,7 @@ const Gallery = ({ images }) => {
           </div>
       </div>
     </div>
+    </AnimatedPage>
   );
 };
 export default Gallery;

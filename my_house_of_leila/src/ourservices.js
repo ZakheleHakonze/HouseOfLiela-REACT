@@ -5,9 +5,11 @@ import ButtonWithImage from './buttonwithimage';
 import 'react-tabs/style/react-tabs.css';
 import './styles.css';
 import Footer from './footer';
+import AnimatedPage from './AnimatedPage';
 
 const Ourservices = () => {
   return (
+    <AnimatedPage>
     <div className='allbody'>
       <div className="background">
         <div className="app-container">
@@ -53,6 +55,7 @@ const Ourservices = () => {
         </div>
       </div>
     </div>
+    </AnimatedPage>
   );
 };
 

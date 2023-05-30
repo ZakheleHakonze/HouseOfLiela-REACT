@@ -1,14 +1,18 @@
 import React, { useState, useEffect  } from 'react';
+import { RiArrowGoBackLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Contact from './contact';
 import Gallery from './gallery';
 import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
 import Footer from './footer';
+import AnimatedPage from './AnimatedPage';
 
 
 const Spa = () => {
- 
+
+const navigate = useNavigate(); // Create a navigate function 
 // Random circle generation
 const circleSizes = ['30px', '40px', '50px', '60px', '70px', '80px', '100px'];
 const circleColors = ['#FFB6C1', '#FFB7C5', '#FFC1CC', '#F6909D', '#FC8EAC'];
@@ -44,9 +48,19 @@ const circleElements = circles.map((circle, index) => (
   />
 ));
 /*----------------------------------------------------------------------------------------------------------*/  
+
+const handleBackButtonClick = () => {
+  navigate('/services'); // Redirect to 'ourservices' page
+};
+
+
   return (
+    <AnimatedPage>
     <div className="gallerybackmain">{circleElements}
       <div className="galleryback">
+      <button className="back-button" onClick={handleBackButtonClick}>
+          <RiArrowGoBackLine className="back-icon" />
+      </button>
           <h1 className="center-textC" >Spa Treatment Pricelist</h1>
           <p className="center-text"style={{columns: "1",fontSize: '20px'}}>
               <ul className="bold-text">Facials</ul>
@@ -153,6 +167,7 @@ const circleElements = circles.map((circle, index) => (
       </div>
       <Footer/>
     </div>
+    </AnimatedPage>
   );
 };
 

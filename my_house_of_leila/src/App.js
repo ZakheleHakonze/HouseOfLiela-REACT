@@ -12,41 +12,15 @@ import Spa from './spa';
 import Hair from './hair';
 import Glutathione from './glutathione';
 import Laser from './laser';
+import Navbar from './navbar';
+
 
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <div className="navbar">
-            <div className="container nav-container">
-              <input className="checkbox" type="checkbox" name="" id="" />
-              <div className="hamburger-lines">
-                <span className="line line1"></span>
-                <span className="line line2"></span>
-                <span className="line line3"></span>
-              </div>
-              <div className="logo">
-                <h1 style={{ fontFamily: 'cursive' }}>House of Leila</h1>
-              </div>
-              <div className="menu-items">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/services">Our services</Link>
-                </li>
-                <li>
-                  <Link to="/gallery">Gallery</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact us</Link>
-                </li>
-              </div>
-            </div>
-          </div>
-        </nav>
-
+        <React.Fragment>
+          <Navbar/>
+		    </React.Fragment>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Ourservices />} />
@@ -58,7 +32,7 @@ function App() {
           <Route path="/glutathione" element={<Glutathione />} /> {/* Add the route for Barbershop */}
           <Route path="/laser" element={<Laser />} /> {/* Add the route for Barbershop */}
         </Routes>
-      </div>
+
     </Router>
   );
 }

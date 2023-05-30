@@ -1,80 +1,37 @@
-import React, { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { Link } from 'react-scroll';
+import { useRef } from "react";
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./styles.css";
+import './index.css';
+import logo from './images/logo.png';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
+function Navbar() {
+	const navRef = useRef();
 
-  return (
-    <nav>
-      <div className="logo">
-        <img src="images/logo/logo.png" alt="Logo" />
-      </div>
-      <div className="tabs">
-        <ul className={isOpen ? 'open' : ''}>
-          <li>
-            <Link
-              activeClass="active"
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={toggleNavbar}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="services"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={toggleNavbar}
-            >
-              Our Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="gallery"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={toggleNavbar}
-            >
-              Gallery
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={toggleNavbar}
-            >
-              Contact Us
-            </Link>
-          </li>
-        </ul>
-        <div className="hamburger" onClick={toggleNavbar}>
-          <GiHamburgerMenu />
-        </div>
-      </div>
-    </nav>
-  );
-};
+	const showNavbar = () => {
+		navRef.current.classList.toggle(
+			"responsive_nav"
+		);
+	};
+
+	return (
+		  <header>
+		  	<h3><img src={logo} alt="Logo" className="logo" style={{ width: '100px', height: 'auto' }} /></h3>
+		  	<nav ref={navRef}>
+		  		<a href="/#"><Link to="/">Home</Link></a>
+		  		<a href="/services"><Link to="/services">Our services</Link></a>
+		  		<a href="/gallery"><Link to="/gallery">Gallery</Link></a>
+		  		<a href="/contact"><Link to="/contact">Contact us</Link></a>
+		  		<button className="nav-btn nav-close-btn" onClick={showNavbar}>
+		  			<FaTimes />
+		  		</button>
+		  	</nav>
+		  	<button className="nav-btn" onClick={showNavbar}>
+		  		<FaBars />
+		  	</button>
+		  </header>
+	);
+}
 
 export default Navbar;

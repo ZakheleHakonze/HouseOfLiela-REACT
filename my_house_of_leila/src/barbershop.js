@@ -1,13 +1,16 @@
 import React, { useState, useEffect  } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Contact from './contact';
-import Gallery from './gallery';
+import { RiArrowGoBackLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
 import Footer from './footer';
+import AnimatedPage from './AnimatedPage';
+
 
 
 const Barbershop = () => {  
+const navigate = useNavigate(); // Create a navigate function 
+
   // Random circle generation
 const circleSizes = ['30px', '40px', '50px', '60px', '70px', '80px', '100px'];
 const circleColors = ['#FFB6C1', '#FFB7C5', '#FFC1CC', '#F6909D', '#FC8EAC'];
@@ -42,10 +45,17 @@ const circleElements = circles.map((circle, index) => (
     style={{ width: circle.size, height: circle.size, backgroundColor: circle.color, left: circle.left, top: circle.top, zIndex: 1 }}
   />
 ));
-// 
+//------------------------------------------------------------------------------------- 
+const handleBackButtonClick = () => {
+  navigate('/services'); // Redirect to 'ourservices' page
+};
   return (
+    <AnimatedPage>
     <div className="gallerybackmain">{circleElements}
       <div className="galleryback">
+      <button className="back-button" onClick={handleBackButtonClick}>
+          <RiArrowGoBackLine className="back-icon" />
+      </button>
         <h1 className="center-textC">Barbershop Pricelist</h1>
           <p className="center-text">
             <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
@@ -64,6 +74,7 @@ const circleElements = circles.map((circle, index) => (
       </div>
       <Footer/>
     </div>
+    </AnimatedPage>
   );
 };
 
