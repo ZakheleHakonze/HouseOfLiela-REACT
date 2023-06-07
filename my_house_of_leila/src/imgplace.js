@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 
 const Imgplace  = ({ src, alt }) => {
     const [isImageLoaded, setImageLoaded] = useState(false);
@@ -9,7 +11,7 @@ const Imgplace  = ({ src, alt }) => {
   
     return (
       <div className="image-card">
-        {!isImageLoaded && <div className="placeholder" />}
+        {!isImageLoaded && <Skeleton variant="text" sx={{ fontSize: '1rem' }} />} 
         <img
           src={src}
           alt={alt}

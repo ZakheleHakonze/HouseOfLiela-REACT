@@ -1,4 +1,6 @@
 import React, { useState, useEffect  } from 'react';
+import CallIcon from '@mui/icons-material/Call';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
@@ -12,7 +14,7 @@ const Contact = () => {
     <div>
       <div>
         <div>
-          <div className='gallerybackmain'>
+          <div className='gallerybackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div className='galleryback'>
             <ul style={{ textAlign: 'center', display: 'inline-block'}}>Tell us about your wellness needs or just say hello. Whether you need a simple spa treatment or SPArty, we are here to deliver the Wellness Revolution.</ul> 
               <p  style={{ textAlign: 'center'}}>
@@ -29,9 +31,11 @@ const Contact = () => {
                 <br />
                 <br />
               <ul className="bold-text">Location:</ul>
-              <ul>38 Mpulungu Road, Olympia park, Lusaka, Zambia.</ul>
+              <ul><LocationOnIcon/>38 Mpulungu Road, Olympia park, Lusaka, Zambia.</ul>
                 <br />
-              <ul className="bold-text">Contact us on: +260 96 0753333</ul>
+              <ul className="bold-text">Contact us on:</ul>
+              <ul><CallIcon/> +260 96 0753333</ul>
+
             </p>
             </div>
           </div>

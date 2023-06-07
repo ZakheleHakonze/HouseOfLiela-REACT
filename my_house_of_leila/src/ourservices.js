@@ -13,7 +13,7 @@ const Ourservices = () => {
     <div className='allbody'>
       <div className="background">
         <div className="app-container">
-          <div className='gallerybackmain'>
+          <div className='gallerybackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div className='galleryback'>
               <div className="tabs-containerb">
                 <Link to="/spa">

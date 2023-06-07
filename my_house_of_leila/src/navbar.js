@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./styles.css";
 import './index.css';
-import logo from './images/logo.png';
+import logo from './images/logo/logo2.png';
 
 
 function Navbar() {
@@ -17,7 +17,7 @@ function Navbar() {
 
 	return (
 		  <header>
-		  	<h3><img src={logo} alt="Logo" className="logo" style={{ width: '100px', height: 'auto' }} /></h3>
+		  	<h3><Link to="/"><img src={logo} alt="Logo" className="logo" style={{ width: '72px', height: '72px' }} /></Link></h3>
 		  	<nav ref={navRef}>
 		  		<a href="/#"><Link to="/">Home</Link></a>
 		  		<a href="/services"><Link to="/services">Our services</Link></a>

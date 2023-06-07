@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
-import logo from './images/logo.png';
-import Footer from './footer';
 import './styles.css';
 import Home from './home';
 import Ourservices from './ourservices';
@@ -13,6 +11,7 @@ import Hair from './hair';
 import Glutathione from './glutathione';
 import Laser from './laser';
 import Navbar from './navbar';
+
 
 
 function App() {

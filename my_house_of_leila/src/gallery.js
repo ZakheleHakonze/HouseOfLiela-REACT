@@ -3,6 +3,7 @@ import Masonry from 'react-masonry-css';
 import 'react-tabs/style/react-tabs.css';
 import Imgplace from './imgplace';
 import AnimatedPage from './AnimatedPage';
+import Footer from './footer';
 import './styles.css'; // make sure to create this file in your project directory
 
 
@@ -46,15 +47,13 @@ const Gallery = ({ images }) => {
     <div className='allbody'>
       <div className="background">
           <div className="app-container">
-            <div className='gallerybackmain'>
+            <div className='gallerybackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <div className='galleryback'>
                 <Gallery images={imageObjects} />
               </div>
             </div>
     <br />
-      <footer>
-        <p>&copy; 2023 House of Leila | created by Zakhele Hakonze | All rights reserved.</p>
-      </footer>
+      <Footer/>
     <br />
           </div>
       </div>
