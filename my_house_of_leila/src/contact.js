@@ -6,6 +6,8 @@ import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
 import Footer from './footer';
 import AnimatedPage from './AnimatedPage';
+import logo from './images/logo/logo2.png';
+
 
 
 const Contact = () => {
@@ -16,26 +18,28 @@ const Contact = () => {
         <div>
           <div className='gallerybackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div className='galleryback'>
-            <ul style={{ textAlign: 'center', display: 'inline-block'}}>Tell us about your wellness needs or just say hello. Whether you need a simple spa treatment or SPArty, we are here to deliver the Wellness Revolution.</ul> 
+            <ul style={{ justifyContent: 'center', display: 'flex', alignItems: 'center', textAlign: 'center'}}>We would love to hear from you! If you have any questions, inquiries, or feedback, please don't hesitate to reach out to us. Our dedicated team is ready to assist you in any way we can.</ul> 
+            <br/>
               <p  style={{ textAlign: 'center'}}>
-              <ul style={{ fontWeight: 'bold' }}>Working Hours</ul>
+              <ul style={{ fontWeight: 'bold' }}>Business Hours</ul>
                 <ul>Saturday	9 am–6 pm</ul>
                 <ul>Sunday	10 am–3 pm</ul>
-                <ul>Monday  9 am–6 pm</ul>
-                <ul>Tuesday	9 am–6 pm</ul>
-                <ul>Wednesday	9 am–6 pm</ul>
-                <ul>Thursday	9 am–6 pm</ul>
-                <ul>Friday	9 am–6 pm</ul>
+                <ul>Monday - Friday  9 am–6 pm</ul>
                 <br />
               <ul className="bold-text">Public Holidays	Hours might differ</ul>
                 <br />
+                <div className="log logo-flip">
+                  <img src={logo} alt="Log" style={{ width: '72px', height: '72px' }} />
+                </div>
                 <br />
-              <ul className="bold-text">Location:</ul>
+              <ul className="bold-text">Visit us at our location:</ul>
               <ul><LocationOnIcon/>38 Mpulungu Road, Olympia park, Lusaka, Zambia.</ul>
                 <br />
               <ul className="bold-text">Contact us on:</ul>
               <ul><CallIcon/> +260 96 0753333</ul>
-
+              <p>
+                We value your input and look forward to serving you. Feel free to contact us anytime!
+              </p>
             </p>
             </div>
           </div>

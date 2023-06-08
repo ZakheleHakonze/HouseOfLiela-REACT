@@ -1,16 +1,22 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect, useRef   } from 'react';
+import Button from '@mui/material/Button';
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import { RiArrowGoBackLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Contact from './contact';
-import Gallery from './gallery';
 import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
 import Footer from './footer';
 import AnimatedPage from './AnimatedPage';
+import Divider from '@mui/material/Divider';
 
 
 const Spa = () => {
+  const carouselContainerRef = useRef(null);
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(true);
+  };
 
 const navigate = useNavigate(); // Create a navigate function 
 // Random circle generation
@@ -58,10 +64,11 @@ const handleBackButtonClick = () => {
     <AnimatedPage>
     <div className="gallerybackmain">{circleElements}
       <div className="galleryback">
-      <button className="back-button" onClick={handleBackButtonClick}>
-          <RiArrowGoBackLine className="back-icon" />
-      </button>
+      <Button variant="contained" color="secondary" style={{ backgroundColor: 'pink', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
+        <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>More Services</Link>
+      </Button>
           <h1 className="center-textC" >Spa Treatment Pricelist</h1>
+          <Divider sx={{ borderBottomWidth: '3px' }} variant="middle" />
           <p className="center-text"style={{columns: "1",fontSize: '20px'}}>
               <ul className="bold-text">Facials</ul>
               <ul className="bold-text">Regima</ul>

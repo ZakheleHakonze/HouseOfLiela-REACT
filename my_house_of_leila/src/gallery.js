@@ -8,10 +8,7 @@ import './styles.css'; // make sure to create this file in your project director
 
 
 const Gallery = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const handleTabClick = (tabIndex: number) => {
-    setActiveTab(tabIndex);
-  };
+  
 
 //const path = require('path');
 
@@ -44,9 +41,9 @@ const Gallery = ({ images }) => {
 //---------------------------------------------------------------------------  
   return (
     <AnimatedPage>
-    <div className='allbody'>
-      <div className="background">
-          <div className="app-container">
+    <div>
+      <div>
+          <div>
             <div className='gallerybackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <div className='galleryback'>
                 <Gallery images={imageObjects} />

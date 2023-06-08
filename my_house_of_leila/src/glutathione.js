@@ -1,14 +1,23 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect, useRef   } from 'react';
+import Button from '@mui/material/Button';
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import { RiArrowGoBackLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
 import Footer from './footer';
 import AnimatedPage from './AnimatedPage';
+import Divider from '@mui/material/Divider';
 
 
 
 const Glutathione = () => {
+  const carouselContainerRef = useRef(null);
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(true);
+  };
 const navigate = useNavigate(); // Create a navigate function 
 
 // Random circle generation
@@ -53,10 +62,11 @@ const handleBackButtonClick = () => {
     <AnimatedPage>
     <div className="gallerybackmain">{circleElements}
       <div className="galleryback">
-      <button className="back-button" onClick={handleBackButtonClick}>
-          <RiArrowGoBackLine className="back-icon" />
-      </button>
+      <Button variant="contained" color="secondary" style={{ backgroundColor: 'pink', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
+        <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>More Services</Link>
+      </Button>
           <h1 className="center-textC">Glutathione Drip Bar Pricelist</h1>
+          <Divider sx={{ borderBottomWidth: '3px' }} variant="middle" />
           <p className="center-text">
             <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
               <li>Skin Brighten K1400 

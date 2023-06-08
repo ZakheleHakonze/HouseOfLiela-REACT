@@ -11,6 +11,7 @@ import Hair from './hair';
 import Glutathione from './glutathione';
 import Laser from './laser';
 import Navbar from './navbar';
+import Divider from '@mui/material/Divider';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <React.Fragment>
           <Navbar/>
 		    </React.Fragment>
+        <Divider sx={{ borderBottomWidth: '1px', borderColor: 'black' }} variant="middle" />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Ourservices />} />
