@@ -39,12 +39,12 @@ const Home = () => {
   return (
     <div>
       <div>
-          <div>
+          <div className="carousel-container">
           <div ref={carouselContainerRef}>
               <Carousel className='main-slide' autoPlay={true} infiniteLoop={true} interval={3000} showThumbs={false}>
                 <div>
                   <div className="carousel-item-container">
-                    <img src={s1} height="600px" width="300px" />
+                    <img src={s1} height="auto" width="100%" />
                     <div className="carousel-caption">
                       <h3>Eyebrow Threading</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
@@ -56,7 +56,7 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="carousel-item-container">
-                    <img src={s2} height="600px" width="300px"/>
+                    <img src={s2} height="auto" width="100%"/>
                     <div className="carousel-caption">
                       <h3>Manicure</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="carousel-item-container">
-                    <img src={s3} height="600px" width="300px"/>
+                    <img src={s3} height="auto" width="100%"/>
                     <div className="carousel-caption">
                       <h3>Hair Salon</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
@@ -79,7 +79,7 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="carousel-item-container">
-                    <img src={s4} height="600px" width="300px"/>
+                    <img src={s4} height="auto" width="100%"/>
                     <div className="carousel-caption">
                       <h3>Laser Hair Removal</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
@@ -91,7 +91,7 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="carousel-item-container">
-                    <img src={s5} height="600px" width="300px"/>
+                    <img src={s5} height="auto" width="100%"/>
                     <div className="carousel-caption">
                       <h3>Glutathione</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>

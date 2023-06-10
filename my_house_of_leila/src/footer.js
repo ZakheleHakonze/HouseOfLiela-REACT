@@ -10,7 +10,7 @@ const Footer = () => {
       <footer className="line-di">
         <Divider sx={{ borderBottomWidth: '1px', borderColor: 'black' }} variant="middle" />
         <InstagramLink/> <FacebookLink/> <WhatsAppLink/>
-        <p>&copy; 2023 House of Leila | created by Zakhele Hakonze | All rights reserved.</p>
+        <p>&copy; 2023 House of Leila | created by Zakhele Hakonze | contact: +27731027145 |All rights reserved.</p>
       </footer>
     );
   };

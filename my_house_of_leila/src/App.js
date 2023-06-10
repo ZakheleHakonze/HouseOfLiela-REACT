@@ -33,7 +33,6 @@ function App() {
           <Route path="/glutathione" element={<Glutathione />} /> {/* Add the route for Barbershop */}
           <Route path="/laser" element={<Laser />} /> {/* Add the route for Barbershop */}
         </Routes>
-
     </Router>
   );
 }

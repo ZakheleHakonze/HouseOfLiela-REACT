@@ -189,6 +189,10 @@ https://www.youtube.com/watch?v=pTinipkJBcs
 	font-family: "Titillium Web", sans-serif;
 }
 
+.navbar-container_ {
+  z-index: 100; /* Set a higher z-index to place the navbar above the Carousel */
+}
+
 :root {
 	--mainColor: pink;
 	--mainColorLight: #5767aa;
@@ -266,7 +270,9 @@ nav {
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
-		background-color: var(--mainColor);
+		background-color: #ffffff05;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
 		transition: 1s;
 	}
 
@@ -306,6 +312,9 @@ https://www.youtube.com/watch?v=amf18mxNX18
   margin: 10px;
 }
 
+.carousel-container {
+  z-index: 1;
+}
 .carousel .slider-wrapper{
   width: 50%;
   border-radius: 8px;

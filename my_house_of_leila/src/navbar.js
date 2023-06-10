@@ -16,7 +16,7 @@ function Navbar() {
 	};
 
 	return (
-		  <header>
+		  <header className="navbar-container_">
 		  	<h3><Link to="/"><img src={logo} alt="Logo" className="logo" style={{ width: '72px', height: '72px' }} /></Link></h3>
 		  	<nav ref={navRef}>
 		  		<a href="/#"><Link to="/">Home</Link></a>

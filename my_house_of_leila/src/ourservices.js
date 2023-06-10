@@ -15,7 +15,7 @@ const Ourservices = () => {
         <div className="app-container">
           <div className='gallerybackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div className='galleryback'>
-              <div className="tabs-containerb">
+              <div className="tabs-containerb" >
                 <Link to="/spa">
                   <ButtonWithImage
                     text="Spa Treatment"
