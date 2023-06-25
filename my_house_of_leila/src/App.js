@@ -13,12 +13,15 @@ import Laser from './laser';
 import Navbar from './navbar';
 import Packages from './packages'
 import Divider from '@mui/material/Divider';
+import ScrollToTop from './ScrollToTop';
+
 
 
 
 function App() {
   return (
     <Router>
+        <ScrollToTop />
         <React.Fragment>
           <Navbar/>
 		    </React.Fragment>

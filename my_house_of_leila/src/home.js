@@ -8,17 +8,15 @@ import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
 import './index.css';
 import Testimonials from './Testimonials';
-import Rating from '@mui/material/Rating';
 import Divider from '@mui/material/Divider';
 import Lightbox from './Lightbox';
-import Typography from '@mui/material/Typography';
-import CardContent from '@mui/material/CardContent';
-import AnimatedPage from './AnimatedPage';
+import ScrollToTop from './ScrollToTop';
 import s1 from './images/carousel/s1.jpg';
 import s2 from './images/carousel/s2.png';
 import s3 from './images/carousel/s3.png';
 import s4 from './images/carousel/s4.png';
 import s5 from './images/carousel/s5.jpeg';
+
 
 
 import Header from './header';
@@ -45,6 +43,7 @@ const Home = () => {
   }, []);
   return (
     <div>
+        <ScrollToTop />
       <div>
           <div className="carousel-container">
           {lightboxOpen && (
@@ -118,13 +117,13 @@ const Home = () => {
                 </div>
               </Carousel>
               </div>
-            
-            <div class="curved-div">
-              <h1>Welcome To House Of Leila </h1>
-                <p>Indulge in a comprehensive range of services designed to unveil your best self. From indulgent skincare rituals to precision hair styling and transformative makeup applications, we specialize in creating personalized experiences that cater to your unique needs and aspirations. Our attention to detail and commitment to quality ensures that every visit to our beauty spa is a moment of sheer indulgence.</p>
-                <svg viewBox="0 0 1440 319">
-                  <path fill="pink" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                </svg>
+              <div className='homebackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',  textAlign: 'center' }}>
+              <div className='homeback'>
+              <ul className="left-aligned-list" style={{ textAlign: 'left', display: 'inline-block',  textAlign: 'center' }}>
+                  <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' , textAlign: 'center'}}>Welcome To House Of Leila</h1>
+                  <li>Indulge in a comprehensive range of services designed to unveil your best self. From indulgent skincare rituals to precision hair styling and transformative makeup applications, we specialize in creating personalized experiences that cater to your unique needs and aspirations. Our attention to detail and commitment to quality ensures that every visit to our beauty spa is a moment of sheer indulgence.</li>
+              </ul> 
+              </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Button variant="contained" color="secondary" style={{ backgroundColor: 'rgb(192, 136, 146)', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
@@ -140,24 +139,16 @@ const Home = () => {
                 </ul> 
               </div>
             </div>
-            <div class="curved-div">
-              <div >
-                <div class="curved-div_">
-                <svg viewBox="0 0 1440 319">
-                    <path fill="rgb(192, 136, 146)" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                </svg>
-                </div>
+            <div className='homebackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <div className='homeback'>
                 <ul  style={{ textAlign: 'center', alignItems: 'center' }}>
-                  <h1 style={{ fontWeight: 'bold' }}>Business Hours</h1>
-                    <p>Saturday	9 am–6 pm</p>
-                    <p>Sunday	10 am–3 pm</p>
-                    <p>Monday - Friday 9 am–6 pm</p>
+                  <h1>Business Hours</h1>
+                    <ul>Saturday	9 am–6 pm</ul>
+                    <ul>Sunday	10 am–3 pm</ul>
+                    <ul>Monday - Friday 9 am–6 pm</ul>
                     <br />
-                    <p className="bold-text">Public Holidays	Hours might differ</p>
+                    <ul className="bold-text">Public Holidays	Hours might differ</ul>
                   </ul> 
-                  <svg viewBox="0 0 1440 319">
-                    <path fill="pink" fill-opacity="1" d="M0,256L48,240C96,224,192,192,288,192C384,192,480,224,576,202.7C672,181,768,107,864,96C960,85,1056,139,1152,133.3C1248,128,1344,64,1392,32L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                  </svg>
               </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

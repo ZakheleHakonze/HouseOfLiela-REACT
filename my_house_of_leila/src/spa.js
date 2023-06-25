@@ -72,103 +72,368 @@ const handleBackButtonClick = () => {
           <p className="center-text"style={{columns: "1",fontSize: '20px'}}>
               <ul className="bold-text">Facials</ul>
               <ul className="bold-text">Regima</ul>
-              <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
-                  <li>Regima chemical peel (45/60) K500</li>
-                  <li>Deep cleansing classic facial (45/60) K550</li>
-                  <li>Anti-aging (45/60) K600</li>
-                  <li>Hydrating facial (45/60) K500</li>
-              </ul>
+              <ul className="left-aligned-list" style={{ textAlign: 'left', display: 'inline-block', fontSize: '20px'}}>
+                  <li>Regima chemical peel</li>
+                  <li>A rejuvenating facial treatment using Regima products to nourish and revitalize your skin. Experience the benefits of advanced skincare techniques tailored to your skin type.</li>
+                  <li>Duration:45 mins / 60 mins</li>
+                  <li>Price:K500</li>
+                  <br />
+
+                  <li>Deep cleansing classic facial</li>
+                  <li>Duration:45 mins / 60 mins</li>
+                  <li>Price:K550</li>
+                  <br />
+
+                  <li>Anti-aging</li>
+                  <li>Duration:45 mins / 60 mins</li>
+                  <li>Price:K600</li>
+                  <br />
+
+                  <li>Hydrating facial</li>
+                  <li>Duration:45mins / 60 mins</li>
+                  <li>Price:K500</li>
+                  <br />
+
+              
               <ul className="bold-text">Himalaya</ul>
-              <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
-                  <li>Deep cleansing(45/60) K400</li>
-                  <li>Purifying (45/60) K350</li>
-                  <li>Dermaplaning (40) K700</li>
-              </ul>
+                  <li>Deep cleansing</li>
+                  <li>Duration:45 min / 60 mins</li>
+                  <li>Price:K400</li>
+                  <br />
+
+                  <li>Purifying</li>
+                  <li>Duration:45 mins / 60 mins</li>
+                  <li>Price:K350</li>
+                  <br />
+
+                  <li>Dermaplaning</li>
+                  <li>Duration:40 mins</li>
+                  <li>Price:K700</li>
+                  <br />
+
+              
               <ul className="bold-text">Manicure</ul>
-              <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
-                  <li>Express mani (20) K180</li>
-                  <li>Deluxe mani (30) K200</li>
-                  <li>Paraffin mani (45) K250</li>
-                  <li>Junior mani (15) K100</li>
-                  <li>Gel extension (90) K350</li>
-                  <li>Rubber gel overlay (60) K350</li>
-                  <li>Refill Nails (60) K250</li>
-                  <li>Acrylic (90) K450</li>
-                  <li>French acrylic (90) K400</li>
-                  <li>Art on finger K20</li>
-                  <li>Soak off gel (30) K50 / K100</li>
-                  <li>Soak off acrylic (30) K100 / K150</li>
-                  <li>Mani &amp; Pedi combo (60) K400</li>
-                  <li>Nail art set K120</li>
-                  <li>Nail fix K20</li>
-                  <li>Ibx nail strengthening treatment (20) K150</li>
-                  <li>Ibx add on (20) K100</li>
-              </ul>
+                  <li>Express mani</li>
+                  <li>Duration:20 mins</li>
+                  <li>Price:K180</li>
+                  <br />
+
+                  <li>Deluxe mani</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K200</li>
+                  <br />
+
+                  <li>Paraffin mani</li>
+                  <li>Duration:45 mins</li>
+                  <li>Price:K250</li>
+                  <br />
+
+                  <li>Junior mani</li>
+                  <li>Duration:15 mins</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Gel extension</li>
+                  <li>Duration:90 mins</li>
+                  <li>Price:K350</li>
+                  <br />
+
+                  <li>Rubber gel overlay</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K350</li>
+                  <br />
+
+                  <li>Refill Nails</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K250</li>
+                  <br />
+
+                  <li>Acrylic</li>
+                  <li>Duration:90 mins</li>
+                  <li>Price:K450</li>
+                  <br />
+
+                  <li>French acrylic</li>
+                  <li>Duration:90 mins</li>
+                  <li>Price:K400</li>
+                  <br />
+
+                  <li>Art on finger</li>
+                  <li>Price:K20</li>
+                  <br />
+
+                  <li>Soak off gel</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K50</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Soak off acrylic</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K100</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K150</li>
+                  <br />
+
+                  <li>Mani &amp; Pedi combo</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K400</li>
+                  <br />
+
+                  <li>Nail art set</li>
+                  <li>Price:K120</li>
+                  <br />
+
+                  <li>Nail fix</li>
+                  <li>Price:K20</li>
+                  <br />
+
+                  <li>Ibx nail strengthening treatment</li>
+                  <li>Duration:20 mins</li>
+                  <li>Price:K150</li>
+                  <br />
+
+                  <li>Ibx add on</li>
+                  <li>Duration:20 mins</li>
+                  <li>Price:K100</li>
+                  <br />
+
               <ul className="bold-text">Massages</ul>
-              <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
-                  <li>Thai massage K900</li>
-                  <li>Swedish (60) K450</li>
-                  <li>Deep tissue (60) K550</li>
-                  <li>Hot stone (60) K600</li>
-                  <li>Foot massage (30) K250</li>
-                  <li>Aromatherapy (60) K500</li>
-                  <li>Half body (30) K350</li>
-                  <li>Hot towel massage K600</li>
-                  <li>Add on hot towel massage (60) K600</li>
-                  <li>Back & neck massage (30) K350</li>
-              </ul>
+                  <li>Thai massage</li>
+                  <li>Price:K900</li>
+                  <br />
+
+                  <li>Swedish</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K450</li>
+                  <br />
+
+                  <li>Deep tissue</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K550</li>
+                  <br />
+
+                  <li>Hot stone</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K600</li>
+                  <br />
+
+                  <li>Foot massage</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K250</li>
+                  <br />
+
+                  <li>Aromatherapy</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K500</li>
+                  <br />
+
+                  <li>Half body</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K350</li>
+                  <br />
+
+                  <li>Hot towel massage</li>
+                  <li>Price:K600</li>
+                  <br />
+
+                  <li>Add on hot towel massage</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K600</li>
+                  <br />
+
+                  <li>Back & neck massage</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K350</li>
+                  <br />
+
+              
               <br />
               <br />
               <ul className="bold-text">Body treatments</ul>
-              <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
-                  <li>Body scrub (30) K350</li>
-                  <li>crub & massage (90) K750</li>
+                  <li>Body scrub</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K350</li>
+                  <br />
+
+                  <li>crub & massage</li>
+                  <li>Duration:90 mins</li>
+                  <li>Price:K750</li>
+                  <br />
+
               </ul>
               <ul className="bold-text">Pedicure</ul>
               <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
-                  <li>Express Pedi (30) K200</li>
-                  <li>Deluxe Pedi (60) K250</li>
-                  <li>Paraffin Pedi (65) K300</li>
-                  <li>Gel add on K100</li>
-                  <li>Add Pedi peel K100</li>
-                  <li>Rubber gel K100</li>
+                  <li>Express Pedi</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K200</li>
+                  <br />
+
+                  <li>Deluxe Pedi</li>
+                  <li>Duration:60 mins</li>
+                  <li>Price:K250</li>
+                  <br />
+
+                  <li>Paraffin Pedi</li>
+                  <li>Duration:65 mins</li>
+                  <li>Price:K300</li>
+                  <br />
+
+                  <li>Gel add on</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Add Pedi peel</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Rubber gel</li>
+                  <li>Price:K100</li>
+                  <br />
+
               </ul>
               <ul className="bold-text">Waxing / Threading</ul>
-              <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
-                  <li>Eyebrow K100</li>
-                  <li>Chin wax K100</li>
-                  <li>Lip K100</li>
-                  <li>Full face K300</li>
-                  <li>Underarm (10) K150</li>
-                  <li>Full arm (20) K300</li>
-                  <li>Half arm (15) K200</li>
-                  <li>Tummy (30) K150</li>
-                  <li>Eyebrow threading K150</li>
-                  <li>Eyebrow thread & tint K200</li>
-                  <li>Full face thread K250</li>
-                  <li>Chin thread K100</li>
-                  <li>Upper lip thread K100</li>
-                  <li>Brow tint only K100</li>
-                  <li>Full leg (45) K400</li>
-                  <li>Half leg (30) K300</li>
-                  <li>Bikini (20) K250</li>
-                  <li>Brazilian (25) K400</li>
-                  <li>Hollywood (35) K400</li>
-                  <li>Full back (40) K500</li>
-                  <li>Chest (30) K350</li>
+              <ul className="left-aligned-list" style={{ textAlign: 'left', display: 'inline-block', fontSize: '20px'}}>
+                  <li>Eyebrow</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Chin wax</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Lip</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Full face</li>
+                  <li>Price:K300</li>
+                  <br />
+
+                  <li>Underarm</li>
+                  <li>Duration:10 mins</li>
+                  <li>Price:K150</li>
+                  <br />
+
+                  <li>Full arm</li>
+                  <li>Duration:20 mins</li>
+                  <li>Price:K300</li>
+                  <br />
+
+                  <li>Half arm</li>
+                  <li>Duration:15 mins</li>
+                  <li>Price:K200</li>
+                  <br />
+
+                  <li>Tummy</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K150</li>
+                  <br />
+
+                  <li>Eyebrow threading</li>
+                  <li>Price:K150</li>
+                  <br />
+
+
+                  <li>Eyebrow thread & tint</li>
+                  <li>Price:K200</li>
+                  <br />
+
+                  <li>Full face thread</li>
+                  <li>Price:K250</li>
+                  <br />
+
+                  <li>Chin thread</li>
+                  <li>Price:K100</li>
+                  <br />
+
+
+                  <li>Upper lip thread</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Brow tint only</li>
+                  <li>Price:K100</li>
+                  <br />
+
+                  <li>Full leg</li>
+                  <li>Duration:45 mins</li>
+                  <li>Price:K400</li>
+                  <br />
+
+                  <li>Half leg</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K300</li>
+                  <br />
+
+                  <li>Bikini</li>
+                  <li>Duration:20 mins</li>
+                  <li>Price:K250</li>
+                  <br />
+
+                  <li>Brazilian</li>
+                  <li>Duration:25 mins</li>
+                  <li>Price:K400</li>
+                  <br />
+
+                  <li>Hollywood</li>
+                  <li>Duration:35 mins</li>
+                  <li>Price:K400</li>
+                  <br />
+
+                  <li>Full back</li>
+                  <li>Duration:40 mins</li>
+                  <li>Price:K500</li>
+                  <br />
+
+                  <li>Chest</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K350</li>
+                  <br />
+
                   <ul>Vagacial</ul>
-                  <li>Vagacial (30) K250</li>
+                  <li>Vagacial</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K250</li>
+
+
               </ul>
               <ul className="bold-text">Teens’/ Kids</ul>
-              <ul className="left-aligned-list" style={{ textAlign: 'center', display: 'inline-block', fontSize: '20px'}}>
-                  <li>Teen’s Pedi (45) K150</li>
-                  <li>Teen’s mani (30) K150</li>
-                  <li>Teen’s facial K200</li>
-                  <li>Teen’s massage K200</li>
-                  <li>Teen’s package (massage, mani & Pedi) K600</li>
-                  <li>Kids facial K180</li>
-                  <li>Kids massage K180</li>
-                  <li>Kids package (massage, mani & Pedi) K500</li>
+              <ul className="left-aligned-list" style={{ textAlign: 'left', display: 'inline-block', fontSize: '20px'}}>
+                  <li>Teen’s Pedi</li>
+                  <li>Duration:45 mins</li>
+                  <li>Price:K150</li>
+                  <br />
+
+                  <li>Teen’s mani</li>
+                  <li>Duration:30 mins</li>
+                  <li>Price:K150</li>
+                  <br />
+
+                  <li>Teen’s facial</li>
+                  <li>Price:K200</li>
+                  <br />
+
+                  <li>Teen’s massage</li>
+                  <li>Price:K200</li>
+                  <br />
+
+                  <li>Teen’s package (massage, mani & Pedi)</li>
+                  <li>Price:K600</li>
+                  <br />
+
+                  <li>Kids facial</li>
+                  <li>Price:K180</li>
+                  <br />
+
+                  <li>Kids massage</li>
+                  <li>Price:K180</li>
+                  <br />
+
+                  <li>Kids package (massage, mani & Pedi)</li>
+                  <li>Price:K500</li>
+
               </ul>
           </p>
       </div>
