@@ -11,6 +11,7 @@ import Hair from './hair';
 import Glutathione from './glutathione';
 import Laser from './laser';
 import Navbar from './navbar';
+import Packages from './packages'
 import Divider from '@mui/material/Divider';
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/hair" element={<Hair />} /> {/* Add the route for Barbershop */}
           <Route path="/glutathione" element={<Glutathione />} /> {/* Add the route for Barbershop */}
           <Route path="/laser" element={<Laser />} /> {/* Add the route for Barbershop */}
+          <Route path="/packages" element={<Packages />} /> {/* Add the route for Barbershop */}
         </Routes>
     </Router>
   );

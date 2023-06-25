@@ -10,11 +10,11 @@ import AnimatedPage from './AnimatedPage';
 const Ourservices = () => {
   return (
     <AnimatedPage>
-    <div className='allbody'>
-      <div className="background">
-        <div className="app-container">
-          <div className='gallerybackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div className='galleryback'>
+    <div>
+      <div >
+        <div>
+          <div className='homebackmain' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div className='homeback'>
               <div className="tabs-containerb" >
                 <Link to="/spa">
                   <ButtonWithImage
@@ -44,6 +44,12 @@ const Ourservices = () => {
                   <ButtonWithImage
                     text="Barbershop"
                     imageSrc={require('./images/bshop.jpg')}
+                  />
+                </Link>
+                <Link to="/packages">
+                  <ButtonWithImage
+                    text="Packages"
+                    imageSrc={require('./images/packages.jpg')}
                   />
                 </Link>
               </div>

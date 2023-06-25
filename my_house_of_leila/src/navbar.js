@@ -19,10 +19,10 @@ function Navbar() {
 		  <header className="navbar-container_">
 		  	<h3><Link to="/"><img src={logo} alt="Logo" className="logo" style={{ width: '72px', height: '72px' }} /></Link></h3>
 		  	<nav ref={navRef}>
-		  		<a href="/#"><Link to="/">Home</Link></a>
-		  		<a href="/services"><Link to="/services">Our services</Link></a>
-		  		<a href="/gallery"><Link to="/gallery">Gallery</Link></a>
-		  		<a href="/contact"><Link to="/contact">Contact us</Link></a>
+		  		<a href="/#" onClick={showNavbar}><Link to="/">Home</Link></a>
+		  		<a href="/services" onClick={showNavbar}><Link to="/services">Our services</Link></a>
+		  		<a href="/gallery" onClick={showNavbar}><Link to="/gallery">Gallery</Link></a>
+		  		<a href="/contact" onClick={showNavbar}><Link to="/contact">Contact us</Link></a>
 		  		<button className="nav-btn nav-close-btn" onClick={showNavbar}>
 		  			<FaTimes />
 		  		</button>

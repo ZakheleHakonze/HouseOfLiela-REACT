@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef   } from 'react';
 import Button from '@mui/material/Button';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
-import { RiArrowGoBackLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import 'react-tabs/style/react-tabs.css';
 import './styles.css'; // make sure to create this file in your project directory
@@ -49,7 +48,7 @@ useEffect(() => {
 
 const circleElements = circles.map((circle, index) => (
   <div
-    key={index}
+    key={5}
     className="circle"
     style={{ width: circle.size, height: circle.size, backgroundColor: circle.color, left: circle.left, top: circle.top, zIndex: 1 }}
   />
@@ -60,11 +59,12 @@ const handleBackButtonClick = () => {
 };
   return (
     <AnimatedPage>
-    <div className="gallerybackmain">{circleElements}
-      <div className="galleryback">
+    <div className="gallerybackmain">
+      <div className="galleryback" >
       <Button variant="contained" color="secondary" style={{ backgroundColor: 'pink', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
         <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>More Services</Link>
       </Button>
+      
         <h1 className="center-textC">Barbershop Pricelist</h1>
         <Divider sx={{ borderBottomWidth: '3px' }} variant="middle" />
           <p className="center-text">

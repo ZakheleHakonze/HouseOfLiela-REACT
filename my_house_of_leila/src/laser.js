@@ -59,7 +59,7 @@ const handleBackButtonClick = () => {
 };  
   return (
     <AnimatedPage>
-    <div className="gallerybackmain">{circleElements}
+    <div className="gallerybackmain">
       <div className="galleryback">
       <Button variant="contained" color="secondary" style={{ backgroundColor: 'pink', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
         <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>More Services</Link>
