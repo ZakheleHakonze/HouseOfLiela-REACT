@@ -66,9 +66,6 @@ const handleBackButtonClick = () => {
     <AnimatedPage>
     <div className="gallerybackmain">
       <div className="galleryback">
-      <Button variant="contained" color="secondary" style={{ backgroundColor: 'pink', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
-        <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>More Services</Link>
-      </Button>
       
         <h1 className="center-textC">View our Packages</h1>
         <Divider sx={{ borderBottomWidth: '3px' }} variant="middle" />
@@ -90,7 +87,7 @@ const handleBackButtonClick = () => {
           </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Coming soon...</Button>
           </CardActions>
         </Card>
 
@@ -110,7 +107,7 @@ const handleBackButtonClick = () => {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Coming soon...</Button>
           </CardActions>
         </Card>
 
@@ -130,7 +127,7 @@ const handleBackButtonClick = () => {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Coming soon...</Button>
           </CardActions>
         </Card>
 
@@ -150,7 +147,7 @@ const handleBackButtonClick = () => {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Coming soon....</Button>
           </CardActions>
         </Card>
 

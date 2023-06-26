@@ -61,9 +61,6 @@ const handleBackButtonClick = () => {
     <AnimatedPage>
     <div className="gallerybackmain">
       <div className="galleryback">
-      <Button variant="contained" color="secondary" style={{ backgroundColor: 'pink', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
-        <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>More Services</Link>
-      </Button>
           <h1 className="center-textC">Laser Hair Removal Pricelist</h1>
           <Divider sx={{ borderBottomWidth: '3px' }} variant="middle" />
           <p className="center-text">
