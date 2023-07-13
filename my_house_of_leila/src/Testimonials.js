@@ -63,14 +63,14 @@ const Testimonials = () => {
 
   return (
         <div style={ {display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <Card sx={{ width: '700px' , backgroundColor: '#3f4344', height:'auto' }} key={testimonialsData[currentTestimonial].id}>
+          <Card sx={{ width: '70vw' , backgroundColor: 'rgb(61, 60, 60)', height:'30vh' }} key={testimonialsData[currentTestimonial].id}>
             <CardContent>
               <Rating name="read-only" value={testimonialsData[currentTestimonial].rating} readOnly />
-              <Typography variant="h7" component="div" sx={{ color: 'white' }}>
+              <Typography variant="h7" component="div" sx={{ color: 'pink' }}>
                 {testimonialsData[currentTestimonial].content}
               </Typography>
               <br />
-              <Typography variant="body2" sx={{ color: 'white' }}>
+              <Typography variant="body2" sx={{ color: 'pink' }}>
                 - {testimonialsData[currentTestimonial].author}
               </Typography>
             </CardContent>

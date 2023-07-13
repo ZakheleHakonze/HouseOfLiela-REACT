@@ -13,7 +13,7 @@ const Lightbox = ({ imageUrl, text, onClose }) => {
           <Button
             variant="contained" color="secondary"style={{backgroundColor: 'rgb(192, 136, 146)',color: 'white',borderColor: 'black',}}
             component={Link} to="/packages">
-            View our packages
+            Our Specials
           </Button>
         </div>
         <button className="close-button" onClick={onClose}>

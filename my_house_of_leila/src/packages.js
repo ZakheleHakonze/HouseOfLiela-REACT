@@ -67,7 +67,7 @@ const handleBackButtonClick = () => {
     <div className="gallerybackmain">
       <div className="galleryback">
       
-        <h1 className="center-textC">View our Packages</h1>
+        <h1 className="center-textC">Our Specials</h1>
         <Divider sx={{ borderBottomWidth: '3px' }} variant="middle" />
         <div className='pack'>
         <Card sx={{width: '300px',height: 'auto',margin: '20px',boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',borderRadius: '8px',overflow: 'auto',backgroundColor: 'pink',}}>

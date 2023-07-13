@@ -1,5 +1,5 @@
 body {
-  background-color: pink;
+  background-color: white;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,6 +21,10 @@ code {
 
 .center-text {
   text-align: center;
+}
+
+.left-text {
+  text-align: left;
 }
 
 .center-textC {
@@ -60,7 +64,7 @@ code {
 
 /*---------------GALLERY BOX-------------*/
 .galleryback {
-  background-color: rgb(192, 136, 146);
+  background-color: pink;
   width: 96%;
   height: auto;
   border-radius: 10px;
@@ -78,7 +82,7 @@ code {
 
 /*---------------Home BOX-------------*/
 .homeback {
-  background-color: pink;
+  background-color: white;
   width: 100%;
   height: auto;
   padding: 10px;
@@ -134,6 +138,99 @@ code {
   padding-top: 75%; /* Desired size ratio (e.g., 4:3 aspect ratio) */
 }
 
+/*- - - - - - - - - - - - - - - - - - - */
+
+.clickable-image {
+  cursor: pointer;
+}
+
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+.image-container {
+  width: 100%;
+  height: 100%;
+
+}
+
+.centered-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Hide the buttons by default */
+}
+
+.image-container:hover .arrow {
+  opacity: 1; /* Show the buttons on hover */
+}
+
+.leftBut {
+  justify-content: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  left: 0;
+}
+
+
+.rightBut {
+  justify-content: right;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  right: 0;
+}
+
+
+.close-button {
+  position: absolute;
+  top: 16px; /* Adjust as needed */
+  right: 16px; /* Adjust as needed */
+  font-size: 24px;
+  color: #fff;
+  background: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 
 /*----------------FOOTER------------------------*/
 
@@ -215,10 +312,10 @@ https://www.youtube.com/watch?v=pTinipkJBcs
 }
 
 :root {
-	--mainColor: pink;
+	--mainColor:rgb(61, 60, 60);
 	--mainColorLight: #5767aa;
-	--secondaryColor: white;
-	--textColor: black;
+	--secondaryColor: pink;
+	--textColor: rgb(255, 255, 255);
 }
 
 header {
@@ -284,14 +381,14 @@ nav {
     z-index:50; /* If the slider appears behind the Carousels*/
 		top: -100vh;
 		left: 0;
-		height: 40%;
+		height: 100%;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
-		background-color: #ffffff05;
+		background-color: #232222c2;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(25px);
 		transition: 1s;
@@ -329,7 +426,7 @@ nav {
 https://www.youtube.com/watch?v=amf18mxNX18
 /*-----------------------------------RESPONSIVES CAROUSEL-----------------------------------------------------*/
 .main-slide{
-  padding-top: 10px;
+  padding-top: 0px;
   margin: 0px;/* adjust id you want to move it away from the left and right edges*/
 }
 
@@ -421,7 +518,7 @@ https://www.youtube.com/watch?v=amf18mxNX18
 /*---------------------------------CURVED LINE DIV TOP--------------------------------------*/
 .curved-div {
   position: relative;
-  background: rgb(192, 136, 146);
+  background: pink;
   color: black;
   text-align: center;
   overflow: hidden;
@@ -482,7 +579,7 @@ https://www.youtube.com/watch?v=amf18mxNX18
 
 .lightbox-content {
   background-color: pink;
-  border: 2px solid  rgb(192, 136, 146);;
+  border: 2px solid  rgb(192, 136, 146);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
   padding: 20px;
   width: 60%;
@@ -534,3 +631,49 @@ https://www.youtube.com/watch?v=amf18mxNX18
   margin-top: 10px;
   display: grid;
 }
+/*----------------------------------------------------------------------------------------------*/
+/*------------------------------------------PRICE DROPDOWN--------------------------------------*/
+.price-content {
+  display: none;
+}
+
+.price-block {
+  border: 1px solid #00000000;
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%; /* Set the width to 100% for scalability */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.price-title {
+  margin: 0;
+}
+
+.visible {
+  display: block;
+  
+}
+
+.hidden {
+  display: none;
+}
+
+.visible .dropdown-icon1.flipped {
+  transform: rotate(180deg);
+}
+.visible .dropdown-icon2.flipped {
+  transform: rotate(180deg);
+}
+.visible .dropdown-icon3.flipped {
+  transform: rotate(180deg);
+}
+
+.priceCat {
+  background-color:   rgb(192, 136, 146);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 100%;
+  
+}
+/*-------------------------------------------------------------------------------------------*/

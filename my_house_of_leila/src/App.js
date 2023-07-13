@@ -25,7 +25,6 @@ function App() {
         <React.Fragment>
           <Navbar/>
 		    </React.Fragment>
-        <Divider sx={{ borderBottomWidth: '1px', borderColor: 'black' }} variant="middle" />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Ourservices />} />

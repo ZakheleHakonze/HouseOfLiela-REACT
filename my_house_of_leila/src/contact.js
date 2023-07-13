@@ -28,7 +28,7 @@ const Contact = () => {
                 <br />
               <ul className="bold-text">Public Holidays	Hours might differ</ul>
                 <br />
-                <div className="log logo-flip">
+                <div className="log logo-fli">
                   <img src={logo} alt="Log" style={{ width: '72px', height: '72px' }} />
                 </div>
                 <br />
@@ -45,7 +45,6 @@ const Contact = () => {
           </div>
           <br />
             <Footer/>
-          <br />
         </div>
     </div>
   </div>

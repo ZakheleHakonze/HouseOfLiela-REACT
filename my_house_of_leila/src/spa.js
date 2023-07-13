@@ -8,6 +8,7 @@ import './styles.css'; // make sure to create this file in your project director
 import Footer from './footer';
 import AnimatedPage from './AnimatedPage';
 import Divider from '@mui/material/Divider';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
 const Spa = () => {
@@ -19,45 +20,124 @@ const Spa = () => {
   };
 
 const navigate = useNavigate(); // Create a navigate function 
-// Random circle generation
-const circleSizes = ['30px', '40px', '50px', '60px', '70px', '80px', '100px'];
-const circleColors = ['#FFB6C1', '#FFB7C5', '#FFC1CC', '#F6909D', '#FC8EAC'];
-
-const [circles, setCircles] = useState(Array.from({ length: 20 }, () => ({
-  size: circleSizes[Math.floor(Math.random() * circleSizes.length)],
-  color: circleColors[Math.floor(Math.random() * circleColors.length)],
-  left: Math.floor(Math.random() * window.innerWidth),
-  top: Math.floor(Math.random() * window.innerHeight),
-  vx: Math.random() * 2 - 1,
-  vy: Math.random() * 2 - 1,
-})));
-
-useEffect(() => {
-  const interval = setInterval(() => {
-    setCircles(circles => circles.map(circle => ({
-      ...circle,
-      left: circle.left + circle.vx,
-      top: circle.top + circle.vy,
-      vx: circle.left + circle.vx < 0 || circle.left + circle.vx > window.innerWidth ? -circle.vx : circle.vx,
-      vy: circle.top + circle.vy < 0 || circle.top + circle.vy > window.innerHeight ? -circle.vy : circle.vy,
-    })));
-  }, 20);
-
-  return () => clearInterval(interval);
-}, []);
-
-const circleElements = circles.map((circle, index) => (
-  <div
-    key={index}
-    className="circle"
-    style={{ width: circle.size, height: circle.size, backgroundColor: circle.color, left: circle.left, top: circle.top, zIndex: 1 }}
-  />
-));
-/*----------------------------------------------------------------------------------------------------------*/  
 
 const handleBackButtonClick = () => {
   navigate('/services'); // Redirect to 'ourservices' page
 };
+const [facialsVisible, setFacialsVisible] = useState(false);
+const [manicureVisible, setManicureVisible] = useState(false);
+const [massagesVisible, setMassagesVisible] = useState(false);
+const [bodytreatmentsVisible, setBodytreatmentsVisible] = useState(false);
+const [pedicureVisible, setPedicureVisible] = useState(false);
+const [waxingthreadingVisible, setWaxingthreadingVisible] = useState(false);
+const [vagacialVisible, setVagacialVisible] = useState(false);
+const [teenskidsVisible, setTeenskidsVisible] = useState(false);
+/*-------------------------------------------------------------------------------*/
+const handleIconFlip1 = () => {
+  const icon = document.querySelector('.dropdown-icon1');
+  if (facialsVisible) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+};
+
+useEffect(() => {
+  handleIconFlip1();
+}, [facialsVisible]);
+
+
+const handleIconFlip2 = () => {
+  const icon = document.querySelector('.dropdown-icon2');
+  if (manicureVisible) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+};
+
+useEffect(() => {
+  handleIconFlip2();
+}, [manicureVisible]);
+
+const handleIconFlip3 = () => {
+  const icon = document.querySelector('.dropdown-icon3');
+  if (massagesVisible) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+};
+
+useEffect(() => {
+  handleIconFlip3();
+}, [massagesVisible]);
+
+const handleIconFlip4 = () => {
+  const icon = document.querySelector('.dropdown-icon4');
+  if (bodytreatmentsVisible) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+};
+
+useEffect(() => {
+  handleIconFlip4();
+}, [bodytreatmentsVisible]);
+
+const handleIconFlip5 = () => {
+  const icon = document.querySelector('.dropdown-icon5');
+  if (pedicureVisible) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+};
+
+useEffect(() => {
+  handleIconFlip5();
+}, [pedicureVisible]);
+
+const handleIconFlip6 = () => {
+  const icon = document.querySelector('.dropdown-icon6');
+  if (waxingthreadingVisible) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+};
+
+useEffect(() => {
+  handleIconFlip6();
+}, [waxingthreadingVisible]);
+
+const handleIconFlip7 = () => {
+  const icon = document.querySelector('.dropdown-icon7');
+  if (vagacialVisible) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+};
+
+useEffect(() => {
+  handleIconFlip7();
+}, [vagacialVisible]);
+
+const handleIconFlip8 = () => {
+  const icon = document.querySelector('.dropdown-icon8');
+  if (teenskidsVisible) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+};
+
+useEffect(() => {
+  handleIconFlip8();
+}, [teenskidsVisible]);
+/*-------------------------------------------------------------------------------*/
 
 
   return (
@@ -66,11 +146,13 @@ const handleBackButtonClick = () => {
       <div className="galleryback">
           <h1 className="center-textC" >Spa Treatment Pricelist</h1>
           <Divider sx={{ borderBottomWidth: '3px' }} variant="middle" />
-          <p className="center-text"style={{columns: "1",fontSize: '20px'}}>
+          <p className="left-text" style={{fontSize: '20px'}}>
               <ul className="left-aligned-list" style={{ textAlign: 'left', display: 'inline-block', fontSize: '20px'}}>
-              <ul className="bold-text">Facials</ul>
-              <br/>
-              <ul className="bold-text">Regima</ul>
+              <div className="priceCat">
+              <div className="price-block" onClick={() => setFacialsVisible(!facialsVisible)}>
+              <h3 className="price-title">Facials<ArrowDropDownIcon className="dropdown-icon1" /></h3>
+              <div className={`price-content ${facialsVisible ? 'visible' : 'hidden'}`}>
+              <h3>Regima</h3>
                   <li>Regima chemical peel</li>
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>This facial treatment utilizes a Regima chemical peel to exfoliate and renew the skin, targeting specific concerns such as acne, pigmentation, or fine lines. Consult with our skincare experts to determine the most suitable peel for your skin.</li>
@@ -98,7 +180,7 @@ const handleBackButtonClick = () => {
                   <li>Duration:45mins / 60 mins</li>
                   <li>Price:<b>K500</b></li>
                   <br />
-
+                  
               
               <ul className="bold-text">Himalaya</ul>
                   <li>Deep cleansing</li>
@@ -121,9 +203,14 @@ const handleBackButtonClick = () => {
                   <li>Duration:40 mins</li>
                   <li>Price:<b>K700</b></li>
                   <br />
+                  </div>
+                  </div>
+                  </div>
 
-              
-              <ul className="bold-text">Manicure</ul>
+                  <div className="priceCat">
+                  <div className="price-block" onClick={() => setManicureVisible(!manicureVisible)}>
+                  <h3 className="price-title">Manicure<ArrowDropDownIcon className="dropdown-icon2" /></h3>
+                  <div className={`price-content ${manicureVisible ? 'visible' : 'hidden'}`}>
                   <li>Express mani</li>
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>A quick and efficient manicure that includes nail shaping, cuticle care, and a polish application of your choice. Perfect for those on the go.</li>
@@ -243,8 +330,14 @@ const handleBackButtonClick = () => {
                   <li>Duration:20 mins</li>
                   <li>Price:<b>K100</b></li>
                   <br />
+                  </div>
+                  </div>
+                  </div>
 
-              <ul className="bold-text">Massages</ul>
+              <div className="priceCat">
+              <div className="price-block" onClick={() => setMassagesVisible(!massagesVisible)}>
+              <h3 className="price-title">Massages<ArrowDropDownIcon className="dropdown-icon3" /></h3>
+              <div className={`price-content ${massagesVisible ? 'visible' : 'hidden'}`}>
                   <li>Thai massage</li>
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>Experience the ancient healing art of Thai massage, which combines acupressure, stretching, and deep tissue techniques. This therapeutic massage promotes relaxation, improves flexibility, and balances the body's energy flow.</li>
@@ -312,11 +405,14 @@ const handleBackButtonClick = () => {
                   <li>Duration:30 mins</li>
                   <li>Price:<b>K350</b></li>
                   <br />
+              </div>
+              </div>
+              </div>
 
-              
-              <br />
-              <br />
-              <ul className="bold-text">Body treatments</ul>
+              <div className="priceCat">
+              <div className="price-block" onClick={() => setBodytreatmentsVisible(!bodytreatmentsVisible)}>
+              <h3 className="price-title">Body treatments<ArrowDropDownIcon className="dropdown-icon4" /></h3>
+              <div className={`price-content ${bodytreatmentsVisible ? 'visible' : 'hidden'}`}>  
                   <li>Body scrub</li>
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>Exfoliate and rejuvenate your skin with a body scrub treatment. This service helps to remove dead skin cells, leaving your skin smooth, soft, and refreshed.</li>
@@ -330,8 +426,14 @@ const handleBackButtonClick = () => {
                   <li>Duration:90 mins</li>
                   <li>Price:<b>K750</b></li>
                   <br />
+              </div>
+              </div>
+              </div>
 
-              <ul className="bold-text">Pedicure</ul>
+              <div className="priceCat">
+              <div className="price-block" onClick={() => setPedicureVisible(!pedicureVisible)}>
+              <h3 className="price-title">Pedicure<ArrowDropDownIcon className="dropdown-icon5" /></h3>
+              <div className={`price-content ${pedicureVisible ? 'visible' : 'hidden'}`}> 
                   <li>Express Pedi</li>
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>A quick pedicure service that includes nail shaping, cuticle care, and a polish application. Perfect for maintaining your foot appearance on the go.</li>
@@ -370,8 +472,14 @@ const handleBackButtonClick = () => {
                   <li>Add a layer of rubber gel to your toenails for added protection and durability. This service helps to prevent chipping and extends the life of your pedicure.</li>
                   <li>Price:<b>K100</b></li>
                   <br />
+              </div>
+              </div>
+              </div>
 
-              <ul className="bold-text">Waxing / Threading</ul>
+              <div className="priceCat">
+              <div className="price-block" onClick={() => setWaxingthreadingVisible(!waxingthreadingVisible)}>
+              <h3 className="price-title">Waxing | Threading<ArrowDropDownIcon className="dropdown-icon6" /></h3>
+              <div className={`price-content ${waxingthreadingVisible ? 'visible' : 'hidden'}`}> 
                   <li>Eyebrow</li>
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>Achieve well-groomed eyebrows with professional waxing or threading techniques. Choose the method that suits you best.</li>
@@ -509,16 +617,28 @@ const handleBackButtonClick = () => {
                   <li>Duration:30 mins</li>
                   <li>Price:<b>K350</b></li>
                   <br />
+              </div>
+              </div>
+              </div>
 
-                  <ul className="bold-text">Vagacial</ul>
+              <div className="priceCat">
+              <div className="price-block" onClick={() => setVagacialVisible(!vagacialVisible)}>
+              <h3 className="price-title">Vagacial<ArrowDropDownIcon className="dropdown-icon7" /></h3>
+              <div className={`price-content ${vagacialVisible ? 'visible' : 'hidden'}`}> 
                   <li>Vagacial</li>
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>Revitalize and rejuvenate the skin in the bikini area with a specialized treatment. This service includes exfoliation, extractions, mask application, and moisturization for a refreshed and renewed appearance.</li>
                   <li>Duration:30 mins</li>
                   <li>Price:<b>K250</b></li>
+                  <br/>
+              </div>
+              </div>
+              </div>
 
-
-              <ul className="bold-text">Teens’/ Kids</ul>
+              <div className="priceCat">
+              <div className="price-block" onClick={() => setTeenskidsVisible(!teenskidsVisible)}>
+              <h3 className="price-title">Teens’ | Kids<ArrowDropDownIcon className="dropdown-icon8" /></h3>
+              <div className={`price-content ${teenskidsVisible ? 'visible' : 'hidden'}`}> 
                   <li>Teen’s Pedi</li>
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>Give your teenager's feet a pampering treat with a pedicure service tailored to their needs. This service includes nail shaping, cuticle care, and a polish application.</li>
@@ -567,7 +687,9 @@ const handleBackButtonClick = () => {
                   <Divider sx={{ borderBottomWidth: '3px', width:'5%' }} variant="left" />
                   <li>Treat your child to a special package that includes a massage, manicure, and pedicure. It's a fun and enjoyable experience that will leave them feeling pampered and happy.</li>
                   <li>Price:<b>K500</b></li>
-
+              </div>
+              </div>
+              </div>
               </ul>
           </p>
       </div>

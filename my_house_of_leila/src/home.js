@@ -41,6 +41,8 @@ const Home = () => {
       carouselContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, []);
+
+  
   return (
     <div>
         <ScrollToTop />
@@ -48,9 +50,10 @@ const Home = () => {
           <div className="carousel-container">
           {lightboxOpen && (
             <Lightbox
-              imageUrl="path/to/your/image.jpg"
+              imageUrl={require('./images/pack/father.jpg')}
+
               text="Celebrate Father's Day with Us!
-              Show your appreciation to Dad and make his day extraordinary. Explore our babersho, spa options, and many more designed to make him feel truly special. Treat your father to a memorable Father's Day celebration he deserves!"
+              Show your appreciation to Dad and make his day extraordinary. Explore our babershop, spa options, and many more designed to make him feel truly special. Treat your father to a memorable Father's Day celebration he deserves!"
             onClose={handleCloseLightbox}
             />
           )}
@@ -63,9 +66,7 @@ const Home = () => {
                     <div className="carousel-caption">
                       <h3>Eyebrow Threading</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
-                      <p>Achieve flawlessly shaped eyebrows with the ancient art of eyebrow threading,</p>
-                      <p>leaving you with clean, defined brows that enhance your natural beauty.</p>
-                      <p>Experience the precision and long-lasting results of eyebrow threading today.</p>
+                      <p>Achieve flawlessly shaped eyebrows with the ancient art of eyebrow threading,leaving you with clean, defined brows that enhance your natural beauty.Experience the precision and long-lasting results of eyebrow threading today.</p>
                     </div>
                   </div>
                 </div>
@@ -75,8 +76,7 @@ const Home = () => {
                     <div className="carousel-caption">
                       <h3>Manicure</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
-                      <p>Pamper yourself with a luxurious manicure experience that will</p>
-                      <p>leave your hands feeling rejuvenated and your nails looking fabulous.</p>
+                      <p>Pamper yourself with a luxurious manicure experience that will leave your hands feeling rejuvenated and your nails looking fabulous.</p>
                     </div>
                   </div>
                 </div>
@@ -86,9 +86,7 @@ const Home = () => {
                     <div className="carousel-caption">
                       <h3>Hair Salon</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
-                      <p>Step into our salon and experience the artistry and expertise that goes into creating beautiful hair.</p>
-                      <p>We take the time to understand your unique vision and offer personalized consultations to ensure</p>
-                      <p>you walk out feeling confident and radiant.</p>
+                      <p>Step into our salon and experience the artistry and expertise that goes into creating beautiful hair. We take the time to understand your unique vision and offer personalized consultations to ensure you walk out feeling confident and radiant.</p>
                     </div>
                   </div>
                 </div>
@@ -98,9 +96,7 @@ const Home = () => {
                     <div className="carousel-caption">
                       <h3>Laser Hair Removal</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
-                      <p>Say goodbye to unwanted hair and hello to silky-smooth skin with our advanced laser hair removal services.</p>
-                      <p>Using state-of-the-art technology, our trained professionals can effectively target</p>
-                      <p>and remove unwanted hair from various areas of your body.</p>
+                      <p>Say goodbye to unwanted hair and hello to silky-smooth skin with our advanced laser hair removal services. Using state-of-the-art technology, our trained professionals can effectively target and remove unwanted hair from various areas of your body.</p>
                     </div>
                   </div>
                 </div>
@@ -110,8 +106,7 @@ const Home = () => {
                     <div className="carousel-caption">
                       <h3>Glutathione</h3>
                       <Divider  sx={{ borderColor: 'white', width: '30%', borderBottomWidth: '2px', borderRadius: 0 }} variant="left"/>
-                      <p>Whether you're looking to address hyperpigmentation, reduce the appearance of blemishes,</p>
-                      <p>or simply enhance your overall complexion, our Glutathione treatments are tailored to meet your unique skincare goals.</p>
+                      <p>Whether you're looking to address hyperpigmentation, reduce the appearance of blemishes,or simply enhance your overall complexion, our Glutathione treatments are tailored to meet your unique skincare goals.</p>
                     </div>
                   </div>
                 </div>
@@ -126,7 +121,7 @@ const Home = () => {
               </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <Button variant="contained" color="secondary" style={{ backgroundColor: 'rgb(192, 136, 146)', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
+              <Button variant="contained" color="secondary" style={{ backgroundColor: 'pink', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
                 <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>View our services</Link>
               </Button>
             </div>
@@ -147,18 +142,17 @@ const Home = () => {
                     <ul>Sunday	10 am–3 pm</ul>
                     <ul>Monday - Friday 9 am–6 pm</ul>
                     <br />
-                    <ul className="bold-text">Public Holidays	Hours might differ</ul>
+                    <ul className="bold-text">Public Holidays	Hours Might Differ</ul>
                   </ul> 
               </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <Button variant="contained" color="secondary" style={{ backgroundColor: 'rgb(192, 136, 146)', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
+              <Button variant="contained" color="secondary" style={{ backgroundColor: 'pink', color: clicked ? 'white' : 'black', borderColor: clicked ? 'black' : 'pink' }} onClick={handleClick}>       
                 <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>Contact us</Link>
               </Button>
             </div>
     <br />
       <Footer/>
-    <br />
           </div>
       </div>
     </div>
